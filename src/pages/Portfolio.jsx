@@ -297,7 +297,7 @@ const Portfolio = () => {
                 I'm a results-driven engineer with a unique journey — starting with deep expertise in reliability engineering (RAMS) on Metro's advanced GoA4 fully driverless system, to now pioneering AI-powered automation and digital transformation solutions.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                At Keolis MHI / Metro, I've led critical initiatives in hazard management, failure analysis, and predictive maintenance — delivering measurable reliability improvements across complex subsystems including Rolling Stock, ATC, AFC, and PSD. I built the only real-time digital depot monitoring tool in-house, demonstrating my ability to bridge the gap between engineering theory and practical innovation.
+                At Metro, I've led critical initiatives in hazard management, failure analysis, and predictive maintenance — delivering measurable reliability improvements across complex subsystems including Rolling Stock, ATC, AFC, and PSD. I built the only real-time digital depot monitoring tool in-house, demonstrating my ability to bridge the gap between engineering theory and practical innovation.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Now, I'm applying that same engineering rigour and problem-solving mindset to AI and automation — building intelligent systems, chatbots, and consulting on digital transformation strategies. I believe the future belongs to engineers who can think <em>systematically</em> AND <em>creatively</em>.
@@ -518,7 +518,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="border-t border-white border-opacity-10 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400">
-          <p>© 2025 Vinamra Duvey. Crafted with precision, powered by innovation.</p>
+          <p>© 2026 Vinamra Duvey. Crafted with precision, powered by innovation.</p>
           <p className="text-sm">Dubai, UAE &nbsp;•&nbsp; vinamra.me</p>
         </div>
       </footer>
