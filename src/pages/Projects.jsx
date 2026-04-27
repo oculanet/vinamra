@@ -273,9 +273,9 @@ RAMS Analytics envisions a platform where these analyses are living documents �
 • Seeking collaboration with railway RAMS practitioners to co-develop and validate the platform`,
   },
   {
-    id: 'oculanet-ai',
+    id: 'Metro-Iq',
     emoji: '🤖',
-    title: 'Oculanet AI Suite',
+    title: 'MetroIQ AI Suite',
     tagline: 'AI-Powered Automation & Chatbot Solutions',
     status: 'Active — Commercial',
     statusColor: 'bg-green-500',
@@ -285,21 +285,21 @@ RAMS Analytics envisions a platform where these analyses are living documents �
     icon: <Brain size={28} className="text-pink-400" />,
     tech: ['Python', 'LLMs', 'Ollama', 'RAG', 'WhatsApp API', 'Telegram Bot API', 'Flask', 'Supabase', 'Prompt Engineering'],
     impact: ['Multi-channel chatbot deployments (WhatsApp & Telegram)', 'RAG pipelines for domain-specific knowledge bases', 'Custom LLM workflows for business process automation', 'AI consultancy for SME digital transformation'],
-    overview: `Oculanet is Vinamra's AI consultancy and digital solutions venture — applying the same systematic engineering approach used in railway RAMS to the design and deployment of practical AI systems for businesses.
+    overview: `Vinamra's AI consultancy and digital solutions  — applying the same systematic engineering approach used in railway RAMS to the design and deployment of practical AI systems for businesses.
 
-The Oculanet AI Suite encompasses a range of tools and deployments built for clients and internal use: customer-facing chatbots, knowledge base Q&A systems, document processing automation, and AI workflow integrations.`,
+The Metro Iq AI Suite encompasses a range of tools and deployments built for clients and internal use: customer-facing chatbots, knowledge base Q&A systems, document processing automation, and AI workflow integrations.`,
     problem: `Most SMEs know AI could help them but don't know where to start. They face:
 • Vendor solutions that are too expensive or too generic for their specific use case
 • Fear of hallucination and reliability issues with LLMs in business-critical contexts
 • No internal engineering capability to evaluate, implement, or maintain AI systems
 • Data privacy concerns about sending proprietary information to cloud AI APIs`,
-    solution: `The Oculanet AI Suite is built on a philosophy of: **reliable, local-first, use-case-specific AI**.
+    solution: `The Metro AI Suite is built on a philosophy of: **reliable, local-first, use-case-specific AI**.
 
-**RAG-Powered Knowledge Base Chatbots** — For clients with large internal document libraries (SOPs, product manuals, policy documents), Oculanet builds Retrieval-Augmented Generation (RAG) systems that answer natural language questions by retrieving relevant document chunks and generating grounded, cited responses. Hallucination rate is dramatically lower than vanilla LLM chat.
+**RAG-Powered Knowledge Base Chatbots** — For clients with large internal document libraries (SOPs, product manuals, policy documents), I builds Retrieval-Augmented Generation (RAG) systems that answer natural language questions by retrieving relevant document chunks and generating grounded, cited responses. Hallucination rate is dramatically lower than vanilla LLM chat.
 
 **WhatsApp & Telegram Business Bots** — Customer-facing chatbots integrated with business workflows: appointment booking, order status enquiry, product recommendation, escalation to human agent. Built on the WhatsApp Business API and Telegram Bot API with Flask backends.
 
-**Local LLM Deployments (Ollama)** — For clients with strict data privacy requirements, Oculanet deploys open-source LLMs (Llama 3, Mistral, Phi-3) on-premise using Ollama, ensuring no data leaves the client's infrastructure.
+  **Local LLM Deployments (Ollama)** — For clients with strict data privacy requirements, I deploys open-source LLMs (Llama 3, Mistral, Phi-3) on-premise using Ollama, ensuring no data leaves the client's infrastructure.
 
 **Process Automation Workflows** — Connecting LLMs to business tools (email, CRM, calendar, spreadsheets) via API integrations to automate repetitive knowledge work: email drafting, report summarisation, data extraction from documents.
 
