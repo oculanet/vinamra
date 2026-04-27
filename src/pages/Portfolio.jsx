@@ -66,7 +66,7 @@ const Portfolio = () => {
       title: 'Depot IQ',
       tagline: 'Real-Time Depot Occupancy Intelligence',
       description:
-        'Python-based real-time monitoring system replacing manual coordination at Dubai Metro depot. Integrated MMS data feeds, reduced shunting conflicts by 40%, and improved fleet-turn planning.',
+        'Python-based real-time monitoring system replacing manual coordination at Metro depot. Integrated MMS data feeds, reduced shunting conflicts by 40%, and improved fleet-turn planning.',
       tech: ['Python', 'Real-time Data', 'Fleet Analytics', 'Dashboard'],
       icon: '📊',
       color: 'from-cyan-900 to-blue-900',
@@ -77,7 +77,7 @@ const Portfolio = () => {
       title: 'Train IQ',
       tagline: 'AI-Powered Train Health Monitor',
       description:
-        'Intelligent monitoring platform combining sensor telemetry, historical failure data, and ML models to predict component degradation before failures occur across Dubai Metro rolling stock.',
+        'Intelligent monitoring platform combining sensor telemetry, historical failure data, and ML models to predict component degradation before failures occur across Metro rolling stock.',
       tech: ['ML / AI', 'Python', 'Telemetry', 'Predictive Analytics'],
       icon: '🚆',
       color: 'from-purple-900 to-indigo-900',
@@ -110,7 +110,7 @@ const Portfolio = () => {
   const timeline = [
     {
       role: 'RAMS Engineer',
-      company: 'Keolis MHI • Dubai Metro',
+      company: 'Keolis MHI • Metro',
       period: 'Sep 2021 – Present',
       highlight:
         'Led FRACAS implementation, hazard log governance, PSD door failure FTA (40% reduction in shunting conflicts), EN 50126-compliant KPI framework.',
@@ -118,7 +118,7 @@ const Portfolio = () => {
     },
     {
       role: 'Team Leader — Rolling Stock & ATC',
-      company: 'Serco Ltd. • Dubai Metro',
+      company: 'Serco Ltd. • Metro',
       period: 'Jan 2020 – Sep 2021',
       highlight:
         'Managed R2020 Red Line Extension DLP, secured OEM liability extension, received RTA Award for infrastructure contribution.',
@@ -239,7 +239,7 @@ const Portfolio = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                RAMS engineer with ~10 years at Dubai Metro, now building AI-powered systems and automation tools to solve real-world problems at scale.
+                RAMS engineer with ~10 years at Metro, now building AI-powered systems and automation tools to solve real-world problems at scale.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link
@@ -294,10 +294,10 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="md:col-span-2 space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a results-driven engineer with a unique journey — starting with deep expertise in reliability engineering (RAMS) on Dubai Metro's advanced GoA4 fully driverless system, to now pioneering AI-powered automation and digital transformation solutions.
+                I'm a results-driven engineer with a unique journey — starting with deep expertise in reliability engineering (RAMS) on Metro's advanced GoA4 fully driverless system, to now pioneering AI-powered automation and digital transformation solutions.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                At Keolis MHI / Dubai Metro, I've led critical initiatives in hazard management, failure analysis, and predictive maintenance — delivering measurable reliability improvements across complex subsystems including Rolling Stock, ATC, AFC, and PSD. I built the only real-time digital depot monitoring tool in-house, demonstrating my ability to bridge the gap between engineering theory and practical innovation.
+                At Keolis MHI / Metro, I've led critical initiatives in hazard management, failure analysis, and predictive maintenance — delivering measurable reliability improvements across complex subsystems including Rolling Stock, ATC, AFC, and PSD. I built the only real-time digital depot monitoring tool in-house, demonstrating my ability to bridge the gap between engineering theory and practical innovation.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Now, I'm applying that same engineering rigour and problem-solving mindset to AI and automation — building intelligent systems, chatbots, and consulting on digital transformation strategies. I believe the future belongs to engineers who can think <em>systematically</em> AND <em>creatively</em>.
