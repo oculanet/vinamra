@@ -13,7 +13,7 @@ const projects = [
     emoji: '📊',
     title: 'Depot IQ',
     tagline: 'Real-Time Depot Occupancy Intelligence Platform',
-    status: 'Production — Dubai Metro',
+    status: 'Production — Metro',
     statusColor: 'bg-green-500',
     gradient: 'from-cyan-900 to-blue-900',
     border: 'border-cyan-400',
@@ -21,10 +21,10 @@ const projects = [
     icon: <BarChart3 size={28} className="text-cyan-400" />,
     tech: ['Python', 'Real-time Data Feeds', 'MMS Integration', 'Fleet Analytics', 'Dashboard', 'PostgreSQL'],
     impact: ['40% reduction in shunting conflicts', 'Real-time visibility across all stabling roads', 'Replaced manual radio-based coordination', 'Improved fleet-turn planning efficiency by ~30%'],
-    overview: `Dubai Metro's depot operations relied on manual coordination — radio calls, whiteboards, and tribal knowledge to manage where each train was stabled, when it would be ready, and which road was occupied. Mistakes led to shunting conflicts, delayed departures, and last-minute fleet reshuffles that cascaded into service disruptions.
+    overview: `Metro's depot operations relied on manual coordination — radio calls, whiteboards, and tribal knowledge to manage where each train was stabled, when it would be ready, and which road was occupied. Mistakes led to shunting conflicts, delayed departures, and last-minute fleet reshuffles that cascaded into service disruptions.
 
 Depot IQ was born from a simple observation: all this information already existed in the Maintenance Management System (MMS) — it just wasn't surfaced in real time. By building a lightweight Python integration layer that pulled live data from MMS feeds and rendered it on a web-based occupancy map, we gave the entire depot team — from Control Room to Shunting Masters — a single source of truth.`,
-    problem: `Manual depot coordination created significant operational risk at Dubai Metro. With 89+ train sets across multiple stabling roads, the depot team had no unified digital view of occupancy. Shunting plans were created on paper, communicated via radio, and revised verbally — leading to:
+    problem: `Manual depot coordination created significant operational risk at Metro. With 89+ train sets across multiple stabling roads, the depot team had no unified digital view of occupancy. Shunting plans were created on paper, communicated via radio, and revised verbally — leading to:
 • Shunting conflicts when two movements were planned for the same road
 • Fleet planners working from stale data, leading to late platform assignments
 • Control Room unable to verify physical train positions without calling depot staff
@@ -47,7 +47,7 @@ Depot IQ was born from a simple observation: all this information already existe
 • 40% reduction in shunting conflicts in the first 6 months
 • Manual radio coordination for depot state queries eliminated
 • Fleet planners report ~30% improvement in planning efficiency due to accurate ETR visibility
-• First in-house real-time operations tool in Dubai Metro depot history`,
+• First in-house real-time operations tool in Metro depot history`,
   },
   {
     id: 'train-iq',
@@ -62,10 +62,10 @@ Depot IQ was born from a simple observation: all this information already existe
     icon: <Train size={28} className="text-purple-400" />,
     tech: ['Python', 'scikit-learn', 'pandas', 'Time-Series Analysis', 'Anomaly Detection', 'LSTM', 'Power BI'],
     impact: ['Early fault detection 48–72 hours before failure', 'Reduced unplanned corrective maintenance events', 'Data-driven component life prediction', 'EN 50126-aligned reliability metrics'],
-    overview: `Dubai Metro's GoA4 driverless rolling stock generates thousands of sensor data points per train per minute — traction inverter temperatures, door cycle counts, brake application pressures, pantograph force readings, air compressor cycle times, and more. Yet most of this data was used only reactively: a fault alarm fires, a corrective work order is raised, and a technician responds.
+    overview: `Metro's GoA4 driverless rolling stock generates thousands of sensor data points per train per minute — traction inverter temperatures, door cycle counts, brake application pressures, pantograph force readings, air compressor cycle times, and more. Yet most of this data was used only reactively: a fault alarm fires, a corrective work order is raised, and a technician responds.
 
 Train IQ is a prototype AI health monitoring platform designed to shift that paradigm from reactive to predictive. By learning the normal operating envelope of each train and each subsystem, Train IQ can identify when a train is beginning to deviate — often 48–72 hours before an alarm condition is reached.`,
-    problem: `Despite generating rich telemetry, Dubai Metro's maintenance regime was primarily calendar- and counter-based (every X days, every Y km). This meant:
+    problem: `Despite generating rich telemetry, Metro's maintenance regime was primarily calendar- and counter-based (every X days, every Y km). This meant:
 • High-performing components replaced on schedule even when not needed (over-maintenance cost)
 • Degraded components that hadn't yet triggered an alarm going undetected until failure
 • No systematic way to compare the health of Train Set 07 versus Train Set 31 on the same subsystem
@@ -106,7 +106,7 @@ Train IQ is a prototype AI health monitoring platform designed to shift that par
     icon: <Zap size={28} className="text-orange-400" />,
     tech: ['Python', 'Flask', 'Oracle Maximo API', 'React', 'Supabase', 'Celery', 'Workflow Automation'],
     impact: ['Automated work-order prioritisation', 'Reduced planner manual effort by ~50%', 'Integrated asset criticality scoring', 'Dynamic scheduling aligned with operational windows'],
-    overview: `Maintenance planning in a heavy rail environment is a juggling act — balancing asset health, regulatory compliance windows, staffing availability, spare parts inventory, and operational timetable constraints. At Dubai Metro, this planning was done largely manually: a maintenance planner reviewed open work orders in Oracle Maximo, made prioritisation decisions from experience, and created a daily task sheet.
+    overview: `Maintenance planning in a heavy rail environment is a juggling act — balancing asset health, regulatory compliance windows, staffing availability, spare parts inventory, and operational timetable constraints. At Metro, this planning was done largely manually: a maintenance planner reviewed open work orders in Oracle Maximo, made prioritisation decisions from experience, and created a daily task sheet.
 
 StartM (Smart Asset Reliability & Task Manager) is an intelligent middleware layer that automates the prioritisation, sequencing, and scheduling of maintenance work orders by integrating asset criticality scores, health data from Train IQ, operational window calendars, and resource availability into a single decision engine.`,
     problem: `Manual maintenance planning created several systemic problems:
@@ -152,7 +152,7 @@ The output is a dynamic, prioritised work list pushed back to Maximo as a struct
     icon: <Activity size={28} className="text-green-400" />,
     tech: ['Python', 'pandas', 'scikit-learn', 'Power BI', 'Time-Series Analysis', 'ARIMA', 'Random Forest'],
     impact: ['Anomaly detection accuracy >92%', '48-hour advance warning on 3 major component failures', 'Power BI fleet health dashboard used daily by 8 engineers', 'Reduced reactive maintenance costs by estimated 18%'],
-    overview: `Before Train IQ and StartM, the first step toward data-driven maintenance at Dubai Metro was this foundational predictive maintenance engine — a collection of Python models and Power BI dashboards that transformed raw CMMS data into actionable reliability insights.
+    overview: `Before Train IQ and StartM, the first step toward data-driven maintenance at Metro was this foundational predictive maintenance engine — a collection of Python models and Power BI dashboards that transformed raw CMMS data into actionable reliability insights.
 
 Where Train IQ focuses on real-time telemetry, this engine works with historical work-order data, failure records, and component replacement logs to identify patterns, forecast failure rates, and build the statistical foundation for all subsequent AI projects.`,
     problem: `The maintenance team had years of data in Oracle Maximo but no systematic way to extract insight from it. Questions like "Which component fails most on Train Class A versus Class B?", "Is our MTBF improving or degrading over time?", and "Which subsystems contribute most to service-affecting failures?" required hours of manual SQL queries and spreadsheet work to answer — and were therefore rarely asked systematically.`,
@@ -188,7 +188,7 @@ Where Train IQ focuses on real-time telemetry, this engine works with historical
     emoji: '🔧',
     title: 'FRACAS Pro',
     tagline: 'AI-Enhanced Failure Reporting & Corrective Action System',
-    status: 'Active — Dubai Metro Operations',
+    status: 'Active — Metro Operations',
     statusColor: 'bg-green-500',
     gradient: 'from-blue-900 to-slate-900',
     border: 'border-blue-400',
@@ -196,7 +196,7 @@ Where Train IQ focuses on real-time telemetry, this engine works with historical
     icon: <Shield size={28} className="text-blue-400" />,
     tech: ['EN 50126', 'Python', 'NLP / Text Classification', 'Reliability Engineering', 'PostgreSQL', 'Power BI', 'FTA / FMECA'],
     impact: ['EN 50126-compliant failure classification across 6 subsystems', 'NLP-assisted failure mode tagging (saves 2 hrs/day)', 'Automated KPI report generation', 'Full audit trail for RTA regulator submissions'],
-    overview: `FRACAS (Failure Reporting, Analysis, and Corrective Action System) is the backbone of reliability engineering on Dubai Metro. Mandated by the EN 50126 railway reliability standard, FRACAS requires that every failure event is captured, classified, analysed for root cause, and linked to a corrective or preventive action.
+    overview: `FRACAS (Failure Reporting, Analysis, and Corrective Action System) is the backbone of reliability engineering on Metro. Mandated by the EN 50126 railway reliability standard, FRACAS requires that every failure event is captured, classified, analysed for root cause, and linked to a corrective or preventive action.
 
 FRACAS Pro is an enhanced digital implementation of this process, layering NLP-assisted classification and automated KPI reporting on top of the core FRACAS workflow — reducing the administrative burden on engineers while improving data quality and regulatory compliance.`,
     problem: `The legacy FRACAS process relied on engineers manually entering failure reports into a shared spreadsheet, then applying EN 50126 failure classifications by hand. This created:
@@ -268,7 +268,7 @@ RAMS Analytics envisions a platform where these analyses are living documents �
 • Export to standard report formats (IEC 61025, EN 50126 compliant templates)`,
     results: `RAMS Analytics is a research and development concept, currently being prototyped:
 • FTA computational solver implemented and validated against a known reference case
-• Hazard log module in active use for a Dubai Metro system modification project
+• Hazard log module in active use for a Metro system modification project
 • Monte Carlo availability simulation prototype completed with results validated against analytical solutions
 • Seeking collaboration with railway RAMS practitioners to co-develop and validate the platform`,
   },
