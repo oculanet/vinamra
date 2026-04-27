@@ -303,7 +303,7 @@ const Portfolio = () => {
                 Now, I'm applying that same engineering rigour and problem-solving mindset to AI and automation — building intelligent systems, chatbots, and consulting on digital transformation strategies. I believe the future belongs to engineers who can think <em>systematically</em> AND <em>creatively</em>.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Through <strong className="text-cyan-400">Oculanet</strong>, I'm building AI-powered digital solutions at the intersection of engineering knowledge and modern intelligence.
+                Through <strong className="text-cyan-400">Metro IQ</strong>, I'm building AI-powered digital solutions at the intersection of engineering knowledge and modern intelligence.
               </p>
             </div>
             <div className="space-y-4">
@@ -313,7 +313,7 @@ const Portfolio = () => {
               </div>
               <div className="bg-gradient-to-br from-purple-900 to-pink-900 rounded-2xl p-6 border border-purple-400 border-opacity-20">
                 <h3 className="text-sm font-bold text-purple-400 mb-3">🎯 CURRENT FOCUS</h3>
-                <p className="text-gray-300 text-sm">Building <strong className="text-purple-300">Oculanet</strong> — AI-powered digital solutions & marketing. Exploring LLMs, automation workflows, and AI consultancy.</p>
+                <p className="text-gray-300 text-sm">Building <strong className="text-purple-300">MetroIQ</strong> — AI-powered digital solutions & marketing. Exploring LLMs, automation workflows, and AI consultancy.</p>
               </div>
               <div className="bg-gradient-to-br from-orange-900 to-red-900 rounded-2xl p-6 border border-orange-400 border-opacity-20">
                 <h3 className="text-sm font-bold text-orange-400 mb-3">📍 LOCATION</h3>
