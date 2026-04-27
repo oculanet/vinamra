@@ -166,7 +166,7 @@ const Portfolio = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'backdrop-blur-md bg-black bg-opacity-50' : 'bg-transparent'} border-b border-white border-opacity-10`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Vinamra.
+            Vinamra Duvey
           </div>
           {/* Desktop nav */}
           <div className="hidden md:flex gap-8">
