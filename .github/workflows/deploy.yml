@@ -28,6 +28,7 @@ jobs:
           mkdir -p dist
           cp index.html CNAME dist/
           cp -r wedding dist/wedding
+          printf "User-agent: *\nDisallow: /wedding/links/\n" > dist/robots.txt
           touch dist/.nojekyll
 
       - name: Upload artifact

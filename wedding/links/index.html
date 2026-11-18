@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Invite links</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF4E4;--card:#FFFBF3;--ink:#4A2810;--soft:#7C5530;--gold:#B5782B;--line:#EBCB9C;--btn:#A8612A;--btn-ink:#FFF8EE;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#1E120A;--card:#2B1A0E;--ink:#F7E6CB;--soft:#D7B98F;--gold:#E9B45E;--line:#55361B;--btn:#E2A552;--btn-ink:#2A170A;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cormorant Garamond",Garamond,serif;font-size:1.15rem;line-height:1.5}
+main{max-width:520px;margin:0 auto;padding:48px 16px}
+h1{font-family:"Pinyon Script",cursive;font-weight:400;font-size:2.8rem;color:var(--gold);margin:0;text-align:center}
+.sub{text-align:center;color:var(--soft);margin:4px 0 28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+label{display:block;font-weight:600;margin-bottom:6px}
+input{width:100%;font:inherit;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+button{font:inherit;font-weight:600;padding:11px;border-radius:999px;border:1px solid var(--btn);cursor:pointer;background:transparent;color:var(--ink)}
+button.primary{background:var(--btn);color:var(--btn-ink)}
+.out{margin-top:14px;word-break:break-all;color:var(--soft);font-size:1rem;min-height:1.5em}
+ul{list-style:none;padding:0;margin:22px 0 0}
+li{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+li span{font-weight:600}
+li a{color:var(--gold);font-size:1rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Invite links</h1>
+  <p class="sub">Private page for the family. Each guest sees their name on the invitation.</p>
+  <div class="card">
+    <label for="n">Guest name</label>
+    <input id="n" type="text" placeholder="e.g. Sharma Ji" autocomplete="off">
+    <div class="row">
+      <button class="primary" id="copy" type="button">Copy link</button>
+      <button id="wa" type="button">Send on WhatsApp</button>
+    </div>
+    <p class="out" id="out"></p>
+  </div>
+  <ul id="list" aria-label="Links made on this device"></ul>
+</main>
+<script>
+const BASE = location.origin + "/wedding/";
+const n=document.getElementById("n"), out=document.getElementById("out"), list=document.getElementById("list");
+const link = name => BASE + "#" + name.replace(/[^\p{L}\p{N} ]/gu,"").trim().replace(/\s+/g,"-");
+let made=[]; try{made=JSON.parse(localStorage.getItem("invite-links")||"[]")}catch(e){}
+function save(name){ made=[name,...made.filter(x=>x!==name)].slice(0,100); try{localStorage.setItem("invite-links",JSON.stringify(made))}catch(e){} render(); }
+function render(){ list.innerHTML=""; made.forEach(name=>{ const li=document.createElement("li"), s=document.createElement("span"), a=document.createElement("a");
+  s.textContent=name; a.href=link(name); a.target="_blank"; a.rel="noopener"; a.textContent="Open"; li.append(s,a); list.append(li); }); }
+render();
+function get(){ const v=n.value.trim(); if(!v){out.textContent="Type a guest name first.";n.focus();return null} return v; }
+document.getElementById("copy").onclick=async()=>{ const v=get(); if(!v) return; const u=link(v); save(v);
+  try{await navigator.clipboard.writeText(u); out.textContent="Copied: "+u}catch(e){out.textContent=u} };
+document.getElementById("wa").onclick=()=>{ const v=get(); if(!v) return; const u=link(v); save(v);
+  const msg=`Dear ${v},\nWith joy, we invite you to the wedding of Vinamra & Manisha on Friday, 11 December 2026 in Delhi.\nYour invitation: ${u}`;
+  window.open("https://wa.me/?text="+encodeURIComponent(msg),"_blank","noopener"); out.textContent=u; };
+</script>
+</body>
+</html>

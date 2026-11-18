@@ -89,11 +89,6 @@ h1 .amp{display:block;font-size:.5em;line-height:1.2;color:var(--ink-soft)}
 .wishes button[aria-pressed="true"]{background:var(--btn);color:var(--btn-ink);border-color:var(--btn)}
 textarea{width:100%;font:inherit;font-size:1.05rem;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-height:80px;margin-bottom:12px}
 .btn{display:flex;width:100%;align-items:center;justify-content:center;gap:8px;font:inherit;font-size:1.15rem;font-weight:600;padding:13px 18px;border:0;border-radius:999px;background:var(--btn);color:var(--btn-ink);text-decoration:none;cursor:pointer}
-.maker{border-top:1px dashed var(--line);padding-top:28px;margin-top:10px}
-.maker summary{cursor:pointer;color:var(--ink-soft)}
-.maker .row{display:flex;gap:8px;margin-top:14px}
-.maker input{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
-.maker small{display:block;color:var(--ink-soft);margin-top:10px;line-height:1.4}
 .replay{margin-top:26px}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;opacity:0;transition:opacity .3s;z-index:30;pointer-events:none}
 .toast.show{opacity:1}
@@ -146,14 +141,6 @@ textarea{width:100%;font:inherit;font-size:1.05rem;padding:10px 14px;border-radi
   </div>
 
 
-  <details class="maker">
-    <summary>For the family: make a personal invite link</summary>
-    <div class="row">
-      <input id="guest-name" type="text" placeholder="Guest name, e.g. Sharma Ji" aria-label="Guest name">
-      <button class="chip" id="make-link" type="button">Copy link</button>
-    </div>
-    <small>Each guest sees “Dear Sharma Ji,” on the opening and inside. Works best once the page is on your own site, such as Netlify.</small>
-  </details>
 
   <button class="chip replay" id="replay" type="button">Watch the opening again</button>
 </main>
@@ -169,7 +156,6 @@ function guestName(){
 function applyName(){
   const n=guestName(), t = n ? `Dear ${n},` : "Dear loved one,";
   document.getElementById("dear").textContent=t; document.getElementById("dear2").textContent=t;
-  const mk=document.querySelector(".maker"); if(mk) mk.hidden=!!n;
 }
 applyName(); addEventListener("hashchange",applyName);
 
@@ -245,17 +231,6 @@ document.getElementById("replay").addEventListener("click",()=>{
   })();
 })();
 
-/* --- personal link maker --- */
-(function(){
-  const t=document.getElementById("toast"), toast=m=>{t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2400)};
-  document.getElementById("make-link").addEventListener("click",async()=>{
-    const raw=document.getElementById("guest-name").value.trim();
-    if(!raw){toast("Type a guest name first");return}
-    const slug=raw.replace(/[^\p{L}\p{N} ]/gu,"").trim().replace(/\s+/g,"-");
-    const url=location.href.split("#")[0]+"#"+slug;
-    try{await navigator.clipboard.writeText(url);toast("Link copied for "+raw)}catch(e){toast(url)}
-  });
-})();
 </script>
 </body>
 </html>
